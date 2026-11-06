@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de privacidad de PDFAI · PDFAI Privacy Policy</title>
+    <meta name="description" content="Política de privacidad de PDFAI, lector de PDF con IA. PDFAI Privacy Policy." />
+    <link rel="icon" href="icono-512.png" />
+    <link rel="stylesheet" href="estilo.css" />
+    <script>
+      // Idioma: #es / #en en la dirección o el del navegador (español si empieza por «es»; si no, inglés).
+      (function () {
+        function set(l) {
+          document.documentElement.setAttribute("data-lang", l);
+          document.documentElement.lang = l;
+        }
+        var h = location.hash.slice(1);
+        set(h === "en" || h === "es" ? h : /^es\b/i.test(navigator.language || "") ? "es" : "en");
+        addEventListener("hashchange", function () {
+          var x = location.hash.slice(1);
+          if (x === "es" || x === "en") set(x);
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <main>
+      <header class="top">
+        <a class="brand" href="index.html"><img src="icono-512.png" alt="" width="40" height="40" />PDFAI</a>
+        <nav class="langs" aria-label="Idioma / Language"><a href="#es" hreflang="es">ES</a><a href="#en" hreflang="en">EN</a></nav>
+      </header>
+
+      <article class="l-es" lang="es">
+        <h1>Política de privacidad de PDFAI</h1>
+        <p class="meta">Última actualización: 6 de noviembre de 2026</p>
+
+        <h2>Responsable</h2>
+        <p>
+          PDFAI (aplicación para Android y Windows) la desarrolla y publica <strong>Arturo de la Torre</strong>, con domicilio en
+          España, que es el responsable del tratamiento de los pocos datos que recibe (ver «Reportar una respuesta»). Contacto para
+          cualquier cuestión de privacidad: <a href="mailto:pdfai.app@gmail.com">pdfai.app@gmail.com</a>.
+        </p>
+
+        <h2>Resumen</h2>
+        <ul>
+          <li>PDFAI es un lector de PDF que funciona en tu dispositivo. No tiene servidores propios, ni cuentas, ni anuncios, ni analítica, ni informes de errores automáticos.</li>
+          <li>Tus PDF, notas y conversaciones se quedan en tu dispositivo. El desarrollador no los recibe.</li>
+          <li>Solo cuando usas una función de inteligencia artificial (IA), la app envía <strong>directamente</strong> a Google (Gemini) o a Anthropic (Claude), con <strong>tu propia clave</strong>, lo necesario para responder.</li>
+          <li>En el plan gratuito de Gemini, Google puede usar lo que envías para mejorar sus productos y puede revisarlo personal humano.</li>
+          <li>El desarrollador solo recibe lo que tú decides enviarle al reportar una respuesta de la IA o al escribirle.</li>
+        </ul>
+
+        <h2>Datos que se guardan en tu dispositivo</h2>
+        <ul>
+          <li>Los documentos que importas (convertidos a PDF y copiados en el almacenamiento privado de la app).</li>
+          <li>Lo que creas al leer: notas, subrayados, dibujos, marcadores, traducciones, conversaciones con la IA, la ficha de cada libro y el texto reconocido por OCR.</li>
+          <li>Tus ajustes y tus claves de API, guardadas cifradas (Android Keystore en Android; cifrado del sistema en Windows).</li>
+        </ul>
+        <p>
+          Nada de esto se envía al desarrollador. La app no usa las copias de seguridad automáticas en la nube de Android. El
+          reconocimiento de texto (OCR) se hace en el propio dispositivo, sin conexión.
+        </p>
+
+        <h2>Datos que salen del dispositivo y adónde van</h2>
+        <p>Cuando usas la IA (preguntar, traducir, convertir una conversación en nota) y, si has puesto una clave de Gemini, en segundo plano para preparar la ficha y el título de cada libro, la app envía al proveedor elegido:</p>
+        <ul>
+          <li>el texto que seleccionas y tu pregunta;</li>
+          <li>fragmentos del texto del libro necesarios para responder (o el libro entero si activas «Contexto: todo el libro»), y, para la ficha, el texto del libro por tramos y la primera página para el título;</li>
+          <li>si está activado en Ajustes, la imagen de la página o el recorte que seleccionas;</li>
+          <li>tu clave de API, para que el proveedor te identifique.</li>
+        </ul>
+        <p>Proveedores (cada uno trata los datos según sus propias condiciones y su política de privacidad):</p>
+        <ul>
+          <li><strong>Google Gemini</strong> (generativelanguage.googleapis.com): <a href="https://ai.google.dev/gemini-api/terms">condiciones de la API de Gemini</a> y <a href="https://policies.google.com/privacy">política de privacidad de Google</a>.</li>
+          <li><strong>Anthropic Claude</strong> (api.anthropic.com), opcional: <a href="https://www.anthropic.com/legal/privacy">política de privacidad de Anthropic</a>.</li>
+        </ul>
+        <h3>Uso de datos en el plan gratuito de Gemini</h3>
+        <p>
+          Si usas una clave de Gemini sin facturación (plan gratuito), según las condiciones de Google, Google puede usar el contenido
+          que envías y las respuestas para proporcionar, mejorar y desarrollar sus productos y servicios, y puede haber personas que
+          lo lean, anoten y procesen. <strong>No envíes datos personales, sensibles o confidenciales.</strong> En el plan de pago de
+          Gemini y con Claude, los proveedores aplican otras condiciones (consúltalas en sus enlaces).
+        </p>
+        <p>
+          Antes del primer envío, la app muestra un aviso con esta información y un enlace a esta política; sin aceptarlo no se
+          envía nada a la IA. Las conexiones van cifradas (HTTPS). El desarrollador no interviene ni puede ver esas peticiones. Para
+          consultar o borrar lo que hayas enviado a un proveedor, dirígete a ese proveedor.
+        </p>
+
+        <h2>Iniciar sesión con Google para crear la clave (beta, solo Android)</h2>
+        <p>
+          Si eliges «Iniciar sesión con Google», la app te explica antes qué va a hacer y Google te pide permiso para el ámbito
+          <code>https://www.googleapis.com/auth/cloud-platform</code> («ver, editar, configurar y eliminar tus datos de Google
+          Cloud»). Es necesario porque crear un proyecto, activar una API y crear una clave en tu cuenta exige ese permiso; no
+          existe uno más limitado que lo permita. Con él, la app llama <strong>directamente desde tu dispositivo</strong> a las APIs
+          de Google (Cloud Resource Manager, Service Usage y API Keys) para:
+        </p>
+        <ul>
+          <li>buscar un proyecto que la propia app creara antes (nombre «PDFAI», identificador <code>pdfai-…</code>) o crear uno nuevo;</li>
+          <li>activar en él la API de Gemini;</li>
+          <li>crear una clave limitada a la API de Gemini (o reutilizar la clave «PDFAI» de ese proyecto) y leerla;</li>
+          <li>hacer una petición mínima de prueba a Gemini con esa clave.</li>
+        </ul>
+        <p>
+          <strong>Datos de Google a los que accede la app:</strong> solo los de los proyectos y claves que crea la propia app. No lee
+          tu nombre, tu dirección de correo ni otros datos de tu cuenta, ni otros proyectos. La clave se guarda cifrada en tu
+          dispositivo, como una clave pegada. El permiso (token de acceso) se usa solo durante el alta, no se guarda y se borra al
+          terminar. Nada de esto se envía al desarrollador ni a terceros, no se vende, no se usa para publicidad ni para entrenar
+          modelos de IA y nadie lo lee.
+        </p>
+        <blockquote>
+          El uso y la transferencia a cualquier otra aplicación de la información recibida de las APIs de Google por parte de PDFAI
+          se ajustarán a la
+          <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de API de Google</a>,
+          incluidos los requisitos de Uso limitado.
+        </blockquote>
+        <p>
+          <strong>Retirar el permiso y borrar lo creado:</strong> en la app, Ajustes → Privacidad → «Borrar la clave y revocar el
+          acceso» borra la clave del dispositivo y revoca el permiso de PDFAI. También puedes retirarlo en
+          <a href="https://myaccount.google.com/permissions">tu cuenta de Google</a> (Seguridad → Conexiones con terceros). El
+          proyecto «PDFAI» y su clave siguen en tu cuenta hasta que los borres en la
+          <a href="https://console.cloud.google.com/cloud-resource-manager">consola de Google Cloud</a> (Gestionar recursos). Este
+          inicio de sesión es solo para mayores de 18 años (requisito de la API de Gemini).
+        </p>
+
+        <h2>Reportar una respuesta de la IA</h2>
+        <p>
+          Bajo cada respuesta de la IA hay un botón para reportarla (contenido ofensivo, peligroso, sexual, de odio, falso u otro).
+          Si lo usas, la app envía a un Formulario de Google del desarrollador: el motivo, tu comentario (si escribes uno), el texto
+          de la respuesta, tu pregunta, el modelo que respondió, la versión de la app y su idioma. No se envían tu cuenta, tu clave,
+          tu libro ni identificadores del dispositivo. Si no hay conexión, el reporte se guarda en el dispositivo y se envía más
+          tarde. Como alternativa puedes enviarlo por correo a pdfai.app@gmail.com desde tu programa de correo. Google Forms y Gmail
+          los gestiona Google como proveedor del desarrollador.
+        </p>
+        <p>
+          Los reportes se usan solo para revisar y moderar el contenido reportado y mejorar la app (base jurídica: tu consentimiento
+          al enviarlo y el interés legítimo en evitar contenido dañino). Se conservan el tiempo necesario para revisarlos y como
+          máximo un año. La respuesta reportada queda oculta en la app, con opción de verla.
+        </p>
+
+        <h2>Permisos</h2>
+        <p>
+          Solo <strong>Internet</strong>, para las funciones de IA y el envío de reportes. Leer, anotar, buscar y el OCR funcionan
+          sin conexión. La app no pide acceso a tu ubicación, contactos, cámara, micrófono ni a tus archivos: los documentos se
+          abren con el selector de archivos del sistema, solo el que eliges.
+        </p>
+
+        <h2>Conservación y borrado</h2>
+        <ul>
+          <li>Los datos del dispositivo se conservan hasta que borras el libro o desinstalas la app (o borras sus datos en los ajustes del sistema).</li>
+          <li>Las claves se borran en Ajustes («Quitar» para Claude; «Borrar la clave y revocar el acceso» para Gemini) o al desinstalar.</li>
+          <li>Lo enviado a Google o Anthropic se conserva según sus políticas.</li>
+          <li>Para que se borren tus reportes o correos, escribe a pdfai.app@gmail.com.</li>
+        </ul>
+
+        <h2>Menores</h2>
+        <p>
+          PDFAI está dirigida a personas adultas. La API de Gemini exige tener 18 años o más, y el inicio de sesión con Google solo es
+          para mayores de 18 años. La app no está dirigida a menores ni recoge datos de ellos a sabiendas.
+        </p>
+
+        <h2>Tus derechos</h2>
+        <p>
+          Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad de los datos que tenga el desarrollador
+          (solo reportes y correos) escribiendo a pdfai.app@gmail.com. Si crees que no se han atendido bien, puedes reclamar ante la
+          Agencia Española de Protección de Datos (<a href="https://www.aepd.es">www.aepd.es</a>).
+        </p>
+
+        <h2>Cambios</h2>
+        <p>Si esta política cambia, se publicará aquí con su nueva fecha; si el cambio afecta a lo que se envía, la app lo avisará.</p>
+
+        <h2>Contacto</h2>
+        <p><a href="mailto:pdfai.app@gmail.com">pdfai.app@gmail.com</a></p>
+      </article>
+
+      <article class="l-en" lang="en">
+        <h1>PDFAI Privacy Policy</h1>
+        <p class="meta">Last updated: November 6, 2026</p>
+
+        <h2>Controller</h2>
+        <p>
+          PDFAI (an app for Android and Windows) is developed and published by <strong>Arturo de la Torre</strong>, based in
+          Spain, who is the controller of the little data they receive (see “Reporting an AI answer”). Contact for any privacy
+          matter: <a href="mailto:pdfai.app@gmail.com">pdfai.app@gmail.com</a>.
+        </p>
+
+        <h2>Summary</h2>
+        <ul>
+          <li>PDFAI is a PDF reader that runs on your device. It has no developer servers, no accounts, no ads, no analytics and no automatic crash reports.</li>
+          <li>Your PDFs, notes and conversations stay on your device. The developer does not receive them.</li>
+          <li>Only when you use an artificial intelligence (AI) feature does the app send what is needed to answer <strong>directly</strong> to Google (Gemini) or Anthropic (Claude), using <strong>your own key</strong>.</li>
+          <li>On Gemini's free tier, Google may use what you send to improve its products and human reviewers may read it.</li>
+          <li>The developer only receives what you choose to send when you report an AI answer or write to them.</li>
+        </ul>
+
+        <h2>Data stored on your device</h2>
+        <ul>
+          <li>The documents you import (converted to PDF and copied into the app's private storage).</li>
+          <li>What you create while reading: notes, highlights, drawings, bookmarks, translations, AI conversations, each book's summary and the text recognized by OCR.</li>
+          <li>Your settings and your API keys, stored encrypted (Android Keystore on Android; the system's encryption on Windows).</li>
+        </ul>
+        <p>None of this is sent to the developer. The app does not use Android's automatic cloud backup. Text recognition (OCR) runs on the device itself, offline.</p>
+
+        <h2>Data that leaves your device, and where it goes</h2>
+        <p>When you use AI (asking, translating, turning a conversation into a note) and, if you have set a Gemini key, in the background to prepare each book's summary and title, the app sends to the chosen provider:</p>
+        <ul>
+          <li>the text you select and your question;</li>
+          <li>excerpts of the book's text needed to answer (or the whole book if you turn on “Context: whole book”) and, for the summary, the book's text in sections and the first page for the title;</li>
+          <li>if enabled in Settings, the page image or the area you select;</li>
+          <li>your API key, so the provider can identify you.</li>
+        </ul>
+        <p>Providers (each processes the data under its own terms and privacy policy):</p>
+        <ul>
+          <li><strong>Google Gemini</strong> (generativelanguage.googleapis.com): <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+          <li><strong>Anthropic Claude</strong> (api.anthropic.com), optional: <a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a>.</li>
+        </ul>
+        <h3>Data use on Gemini's free tier</h3>
+        <p>
+          If you use a Gemini key without billing (free tier), under Google's terms Google may use the content you send and the
+          responses to provide, improve and develop its products and services, and human reviewers may read, annotate and process
+          it. <strong>Do not send personal, sensitive or confidential information.</strong> On Gemini's paid tier and with Claude, the
+          providers apply different terms (see their links).
+        </p>
+        <p>
+          Before the first request, the app shows a notice with this information and a link to this policy; nothing is sent to the
+          AI until you accept it. Connections are encrypted (HTTPS). The developer is not involved in and cannot see those requests.
+          To access or delete what you sent to a provider, contact that provider.
+        </p>
+
+        <h2>Signing in with Google to create the key (beta, Android only)</h2>
+        <p>
+          If you choose “Sign in with Google”, the app first explains what it will do and Google asks your permission for the scope
+          <code>https://www.googleapis.com/auth/cloud-platform</code> (“see, edit, configure and delete your Google Cloud data”). It
+          is required because creating a project, enabling an API and creating a key in your account needs that permission; there is
+          no narrower one that allows it. With it, the app calls Google's APIs (Cloud Resource Manager, Service Usage and API Keys)
+          <strong>directly from your device</strong> to:
+        </p>
+        <ul>
+          <li>look for a project the app itself created earlier (name “PDFAI”, ID <code>pdfai-…</code>) or create a new one;</li>
+          <li>enable the Gemini API in it;</li>
+          <li>create a key restricted to the Gemini API (or reuse that project's “PDFAI” key) and read it;</li>
+          <li>make a minimal test request to Gemini with that key.</li>
+        </ul>
+        <p>
+          <strong>Google data the app accesses:</strong> only the projects and keys the app itself creates. It does not read your
+          name, email address or any other account data, nor other projects. The key is stored encrypted on your device, like a
+          pasted key. The permission (access token) is only used during setup, is not stored and is cleared afterwards. None of this
+          is sent to the developer or third parties, sold, used for advertising or to train AI models, and no one reads it.
+        </p>
+        <blockquote>
+          PDFAI's use and transfer to any other app of information received from Google APIs will adhere to the
+          <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including
+          the Limited Use requirements.
+        </blockquote>
+        <p>
+          <strong>Revoking the permission and deleting what was created:</strong> in the app, Settings → Privacy → “Delete key and
+          revoke access” deletes the key from the device and revokes PDFAI's permission. You can also remove it in
+          <a href="https://myaccount.google.com/permissions">your Google Account</a> (Security → Third-party connections). The “PDFAI”
+          project and its key stay in your account until you delete them in the
+          <a href="https://console.cloud.google.com/cloud-resource-manager">Google Cloud console</a> (Manage resources). This sign-in is
+          only for people aged 18 or over (a Gemini API requirement).
+        </p>
+
+        <h2>Reporting an AI answer</h2>
+        <p>
+          Under each AI answer there is a button to report it (offensive, dangerous, sexual, hateful, false or other content). If you
+          use it, the app sends to a Google Form owned by the developer: the reason, your comment (if you write one), the text of the
+          answer, your question, the model that answered, the app version and its language. Your account, key, book and device
+          identifiers are not sent. If you are offline, the report is stored on the device and sent later. Alternatively, you can
+          send it by email to pdfai.app@gmail.com from your email app. Google Forms and Gmail are run by Google as the developer's
+          service provider.
+        </p>
+        <p>
+          Reports are only used to review and moderate the reported content and to improve the app (legal basis: your consent when
+          sending it and the legitimate interest in preventing harmful content). They are kept as long as needed to review them and
+          for one year at most. The reported answer is hidden in the app, with an option to show it.
+        </p>
+
+        <h2>Permissions</h2>
+        <p>
+          Only <strong>Internet</strong>, for the AI features and sending reports. Reading, annotating, searching and OCR work offline.
+          The app does not ask for your location, contacts, camera, microphone or files: documents are opened with the system file
+          picker, only the one you choose.
+        </p>
+
+        <h2>Retention and deletion</h2>
+        <ul>
+          <li>On-device data is kept until you delete the book or uninstall the app (or clear its data in the system settings).</li>
+          <li>Keys are deleted in Settings (“Remove” for Claude; “Delete key and revoke access” for Gemini) or when uninstalling.</li>
+          <li>What was sent to Google or Anthropic is kept under their policies.</li>
+          <li>To have your reports or emails deleted, write to pdfai.app@gmail.com.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>
+          PDFAI is intended for adults. The Gemini API requires users to be 18 or older, and signing in with Google is only for people
+          aged 18 or over. The app is not directed at children and does not knowingly collect their data.
+        </p>
+
+        <h2>Your rights</h2>
+        <p>
+          You can request access, rectification, erasure, objection, restriction and portability of the data held by the developer
+          (only reports and emails) by writing to pdfai.app@gmail.com. If you believe your request was not handled properly, you can
+          lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es">www.aepd.es</a>).
+        </p>
+
+        <h2>Changes</h2>
+        <p>If this policy changes, the new version will be published here with its date; if the change affects what is sent, the app will tell you.</p>
+
+        <h2>Contact</h2>
+        <p><a href="mailto:pdfai.app@gmail.com">pdfai.app@gmail.com</a></p>
+      </article>
+
+      <footer>
+        <a href="index.html">PDFAI</a> · <a href="mailto:pdfai.app@gmail.com">pdfai.app@gmail.com</a>
+      </footer>
+    </main>
+  </body>
+</html>

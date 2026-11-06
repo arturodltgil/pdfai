@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PDFAI · Lector de PDF con IA · PDF reader with AI</title>
+    <meta name="description" content="PDFAI: lector de PDF minimalista y sin conexión para Android y Windows; pregunta a la IA por cualquier pasaje con tu propia clave." />
+    <link rel="icon" href="icono-512.png" />
+    <link rel="stylesheet" href="estilo.css" />
+    <script>
+      // Idioma: #es / #en en la dirección o el del navegador (español si empieza por «es»; si no, inglés).
+      (function () {
+        function set(l) {
+          document.documentElement.setAttribute("data-lang", l);
+          document.documentElement.lang = l;
+        }
+        var h = location.hash.slice(1);
+        set(h === "en" || h === "es" ? h : /^es\b/i.test(navigator.language || "") ? "es" : "en");
+        addEventListener("hashchange", function () {
+          var x = location.hash.slice(1);
+          if (x === "es" || x === "en") set(x);
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <main>
+      <header class="top">
+        <a class="brand" href="index.html"><img src="icono-512.png" alt="" width="40" height="40" />PDFAI</a>
+        <nav class="langs" aria-label="Idioma / Language"><a href="#es" hreflang="es">ES</a><a href="#en" hreflang="en">EN</a></nav>
+      </header>
+
+      <section class="l-es" lang="es">
+        <div class="hero">
+          <img src="icono-512.png" alt="Icono de PDFAI" width="128" height="128" />
+          <h1>PDFAI</h1>
+          <p>Lector de PDF minimalista y sin conexión para estudiar libros técnicos, con una IA que conoce el libro cuando la necesitas.</p>
+          <span class="cta">Android (próximamente en Google Play) y Windows</span>
+        </div>
+        <ul class="features">
+          <li><strong>Selecciona y pregunta.</strong> Un párrafo, una fórmula o un recuadro de un diagrama: la IA responde sabiendo de qué trata el libro entero y cita las páginas.</li>
+          <li><strong>Traduce y aprende vocabulario</strong> en su contexto, con un diccionario por libro.</li>
+          <li><strong>Anota como en papel:</strong> notas, boli, marcador, subrayador y cajas de texto.</li>
+          <li><strong>Libros escaneados:</strong> reconocimiento de texto (OCR) en el propio dispositivo, sin conexión.</li>
+          <li><strong>Privado:</strong> sin cuenta, sin anuncios y sin analítica. Tus PDF y notas se quedan en tu dispositivo; la IA funciona con tu propia clave (Gemini, con plan gratuito, o Claude).</li>
+        </ul>
+        <p>PDFAI no tiene servidores propios: lo que preguntas va directamente de tu dispositivo a Google o a Anthropic. Los detalles están en la <a href="privacidad.html#es">política de privacidad</a>.</p>
+        <p>Contacto y soporte: <a href="mailto:pdfai.app@gmail.com">pdfai.app@gmail.com</a></p>
+      </section>
+
+      <section class="l-en" lang="en">
+        <div class="hero">
+          <img src="icono-512.png" alt="PDFAI icon" width="128" height="128" />
+          <h1>PDFAI</h1>
+          <p>A minimalist, offline PDF reader for studying technical books, with an AI that knows the book whenever you need it.</p>
+          <span class="cta">Android (coming soon to Google Play) and Windows</span>
+        </div>
+        <ul class="features">
+          <li><strong>Select and ask.</strong> A paragraph, a formula or an area of a diagram: the AI answers knowing what the whole book is about and cites pages.</li>
+          <li><strong>Translate and learn vocabulary</strong> in context, with a dictionary for each book.</li>
+          <li><strong>Annotate like on paper:</strong> notes, pen, highlighter, underline and text boxes.</li>
+          <li><strong>Scanned books:</strong> on-device text recognition (OCR), offline.</li>
+          <li><strong>Private:</strong> no account, no ads and no analytics. Your PDFs and notes stay on your device; the AI works with your own key (Gemini, with a free tier, or Claude).</li>
+        </ul>
+        <p>PDFAI has no servers of its own: what you ask goes straight from your device to Google or Anthropic. Details are in the <a href="privacidad.html#en">privacy policy</a>.</p>
+        <p>Contact and support: <a href="mailto:pdfai.app@gmail.com">pdfai.app@gmail.com</a></p>
+      </section>
+
+      <footer>
+        <span class="l-es"><a href="privacidad.html#es">Política de privacidad</a></span><span class="l-en"><a href="privacidad.html#en">Privacy policy</a></span> ·
+        <a href="mailto:pdfai.app@gmail.com">pdfai.app@gmail.com</a>
+      </footer>
+    </main>
+  </body>
+</html>

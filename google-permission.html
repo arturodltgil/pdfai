@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PDFAI · Google Cloud permission</title>
+    <meta name="description" content="How PDFAI uses the Google Cloud (cloud-platform) permission and why no narrower permission is enough." />
+    <link rel="icon" href="icono-512.png" />
+    <link rel="stylesheet" href="estilo.css" />
+    <style>
+      table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 12px 0 20px; }
+      th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+      td code, li code { font-size: 0.88em; }
+      .only { font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="top">
+        <a class="brand" href="index.html"><img src="icono-512.png" alt="" width="40" height="40" />PDFAI</a>
+      </header>
+
+      <h1>How PDFAI uses the Google Cloud permission</h1>
+      <p>
+        PDFAI is a PDF reader. Users can ask Google Gemini about the text they select, using <strong>their own</strong> free
+        Gemini API key. Creating that key by hand in AI Studio is hard for many people, so the app offers
+        <strong>“Continue with Google”</strong>: it asks once for the scope
+        <code>https://www.googleapis.com/auth/cloud-platform</code> and, directly from the device, does the setup in the user's
+        own Google account.
+      </p>
+
+      <h2>What the app does with it (once, during setup)</h2>
+      <ol>
+        <li><strong>Creates a Google Cloud project</strong> named “PDFAI” in the user's account (or reuses the one it created before) — Cloud Resource Manager <code>projects.create</code> / <code>projects.search</code>.</li>
+        <li><strong>Enables the Gemini API</strong> (Generative Language API) and the API Keys API in that project — Service Usage <code>services.batchEnable</code>.</li>
+        <li><strong>Creates an API key restricted to the Gemini API</strong> and reads it — API Keys <code>keys.create</code> / <code>keys.getKeyString</code>.</li>
+        <li><strong>Reads the project's IAM policy</strong> to show in Settings which Google account the AI is connected with — <code>projects.getIamPolicy</code>.</li>
+      </ol>
+      <p>
+        The result is visible in the user's Google Cloud console: the “PDFAI” project, the two enabled APIs and the “PDFAI” key.
+        The key is stored encrypted on the device and is only sent to the Gemini API. The access token is not stored and is cleared
+        after setup. <strong>Disconnect</strong> in the app's Settings deletes the key and revokes the grant.
+      </p>
+
+      <h2>Why no narrower permission is enough</h2>
+      <p>Scopes accepted by each call (from Google's API discovery documents):</p>
+      <table>
+        <thead><tr><th>Call</th><th>Accepted scopes</th></tr></thead>
+        <tbody>
+          <tr><td><code>cloudresourcemanager.projects.create</code></td><td class="only">cloud-platform only</td></tr>
+          <tr><td><code>serviceusage.services.batchEnable</code></td><td>cloud-platform, service.management</td></tr>
+          <tr><td><code>apikeys.keys.create</code></td><td>cloud-platform, apikeys</td></tr>
+          <tr><td><code>cloudresourcemanager.projects.getIamPolicy</code></td><td>cloud-platform, cloud-platform.read-only</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Creating the project accepts <strong>only</strong> <code>cloud-platform</code>, and a user who has never used Google Cloud
+        has no project to put the key in. A read-only scope cannot create anything. So <code>cloud-platform</code> is the minimum
+        scope that makes the feature work, and the app requests nothing else.
+      </p>
+
+      <h2>Google user data</h2>
+      <p>
+        The app only touches the “PDFAI” project and key it creates and the email address of that project's owner (shown in
+        Settings). It does <strong>not share, transfer or disclose</strong> Google user data to anyone: the app has no server and
+        the developer never receives it. Details in the <a href="privacidad.html#en">privacy policy</a>.
+      </p>
+    </main>
+  </body>
+</html>

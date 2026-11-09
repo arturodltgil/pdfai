@@ -32,7 +32,7 @@
 
       <article class="l-es" lang="es">
         <h1>Política de privacidad de PDFAI</h1>
-        <p class="meta">Última actualización: 6 de noviembre de 2026</p>
+        <p class="meta">Última actualización: 9 de noviembre de 2026</p>
 
         <h2>Responsable</h2>
         <p>
@@ -99,14 +99,23 @@
           <li>buscar un proyecto que la propia app creara antes (nombre «PDFAI», identificador <code>pdfai-…</code>) o crear uno nuevo;</li>
           <li>activar en él la API de Gemini;</li>
           <li>crear una clave limitada a la API de Gemini (o reutilizar la clave «PDFAI» de ese proyecto) y leerla;</li>
+          <li>leer los permisos de ese proyecto para saber qué cuenta es su propietaria y mostrar en Ajustes con qué cuenta está conectada la IA;</li>
           <li>hacer una petición mínima de prueba a Gemini con esa clave.</li>
         </ul>
         <p>
-          <strong>Datos de Google a los que accede la app:</strong> solo los de los proyectos y claves que crea la propia app. No lee
-          tu nombre, tu dirección de correo ni otros datos de tu cuenta, ni otros proyectos. La clave se guarda cifrada en tu
-          dispositivo, como una clave pegada. El permiso (token de acceso) se usa solo durante el alta, no se guarda y se borra al
-          terminar. Nada de esto se envía al desarrollador ni a terceros, no se vende, no se usa para publicidad ni para entrenar
-          modelos de IA y nadie lo lee.
+          <strong>Datos de Google a los que accede la app:</strong> solo el proyecto «PDFAI» y la clave que crea la propia app, y la
+          dirección de correo de la cuenta propietaria de ese proyecto (la tuya). No lee tu nombre ni otros datos de tu cuenta, ni
+          otros proyectos. La clave se guarda cifrada en tu dispositivo, como una clave pegada; el correo se guarda en el
+          dispositivo solo para mostrarlo en Ajustes y se borra al desconectar la IA. El permiso (token de acceso) se usa solo
+          durante el alta, no se guarda y se borra al terminar.
+        </p>
+        <p>
+          <strong>Con quién se comparten los datos de Google:</strong> con nadie. PDFAI no comparte, transfiere ni comunica los datos
+          de usuario de Google a ninguna persona ni empresa: ni al desarrollador, ni a Anthropic, ni a ningún otro tercero. La app no
+          tiene servidor propio, así que el desarrollador nunca los recibe. Los únicos intercambios son entre tu dispositivo y Google:
+          las llamadas a las APIs de Google Cloud durante el alta y la clave, que solo se envía a la API de Gemini de Google para
+          identificar tus peticiones. Los datos de Google no se venden, no se usan para publicidad ni para entrenar modelos de IA y
+          nadie los lee.
         </p>
         <blockquote>
           El uso y la transferencia a cualquier otra aplicación de la información recibida de las APIs de Google por parte de PDFAI
@@ -175,7 +184,7 @@
 
       <article class="l-en" lang="en">
         <h1>PDFAI Privacy Policy</h1>
-        <p class="meta">Last updated: November 6, 2026</p>
+        <p class="meta">Last updated: November 9, 2026</p>
 
         <h2>Controller</h2>
         <p>
@@ -239,13 +248,22 @@
           <li>look for a project the app itself created earlier (name “PDFAI”, ID <code>pdfai-…</code>) or create a new one;</li>
           <li>enable the Gemini API in it;</li>
           <li>create a key restricted to the Gemini API (or reuse that project's “PDFAI” key) and read it;</li>
+          <li>read that project's IAM policy to find which account owns it, so Settings can show which account the AI is connected with;</li>
           <li>make a minimal test request to Gemini with that key.</li>
         </ul>
         <p>
-          <strong>Google data the app accesses:</strong> only the projects and keys the app itself creates. It does not read your
-          name, email address or any other account data, nor other projects. The key is stored encrypted on your device, like a
-          pasted key. The permission (access token) is only used during setup, is not stored and is cleared afterwards. None of this
-          is sent to the developer or third parties, sold, used for advertising or to train AI models, and no one reads it.
+          <strong>Google data the app accesses:</strong> only the “PDFAI” project and the key the app itself creates, and the email
+          address of the account that owns that project (yours). It does not read your name or any other account data, nor other
+          projects. The key is stored encrypted on your device, like a pasted key; the email address is stored on the device only to
+          show it in Settings and is deleted when you disconnect the AI. The permission (access token) is only used during setup, is
+          not stored and is cleared afterwards.
+        </p>
+        <p>
+          <strong>Who Google user data is shared with:</strong> no one. PDFAI does not share, transfer or disclose Google user data
+          to any person or company: not to the developer, not to Anthropic, not to any other third party. The app has no server of
+          its own, so the developer never receives it. The only exchanges are between your device and Google: the calls to Google
+          Cloud APIs during setup, and the key, which is only sent to Google's Gemini API to identify your requests. Google user data
+          is not sold, not used for advertising or to train AI models, and no one reads it.
         </p>
         <blockquote>
           PDFAI's use and transfer to any other app of information received from Google APIs will adhere to the
